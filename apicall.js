@@ -12,7 +12,7 @@ submit.addEventListener("click", function () {
     .then((data) => (document.getElementById("ans").innerHTML = `${data.ans}`)); //上の内容がdataに入っている dataの辞書(型配列)ansにある要素を出力
 });
 
-//ボタン1を追加
+//ボタンを追加
 const buttonUL = document.querySelector(".buttonUL");
 const numberButton = buttonUL.querySelectorAll("button");
 for (let i = 0; i < numberButton.length; i++) {
@@ -20,7 +20,7 @@ for (let i = 0; i < numberButton.length; i++) {
     const formula = document.getElementById("formula").value;
     const number = event.target.value;
     if (number !== "=") {
-      const newFormula = `${formula}${number}`; //formulaの後ろに1を追加
+      const newFormula = `${formula}${number}`; //formulaの後ろにボタンからの入力追加
       document.getElementById("formula").value = newFormula;
     }
   });
