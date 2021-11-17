@@ -19,7 +19,11 @@ for (let i = 0; i < numberButton.length; i++) {
   numberButton[i].addEventListener("click", function (event) {
     const formula = document.getElementById("formula").value;
     const number = event.target.value;
-    if (number !== "=") {
+    if (number === "=") {
+    } else if (number === "del") {
+      const newFormula = formula.slice(0, -1); //末尾を削除
+      document.getElementById("formula").value = newFormula; //newFormulaの値をweb上の電卓の計算結果として出力
+    } else {
       const newFormula = `${formula}${number}`; //formulaの後ろにボタンからの入力追加
       document.getElementById("formula").value = newFormula;
     }
