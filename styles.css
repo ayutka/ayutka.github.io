@@ -1,0 +1,29 @@
+/** @format */
+
+body {
+  background: rgb(30, 30, 40);
+}
+#formula:focus {
+  border: 3px solid #cc4949;
+}
+
+#formula {
+  color: #eee; /*文字の色*/
+  font-family: Helvetica, Arial, sans-serif; /*フォント*/
+  font-weight: 500; /*文字の太さ*/
+  font-size: 18px;
+  border-radius: 15px; /*角の丸み*/
+  line-height: 22px; /*一行の高さ*/
+  background-color: transparent; /*背景を透明にしてbodyと合わせる*/
+  border: 3px solid #cc6666;
+  transition: all 0.3s; /*色が変わる速度*/
+  padding: 13px; /*入力スペースの空白を開ける*/
+  /*
+　　要素の内側：pudding
+　　-------
+　　要素の外側：margin 上下左右ある 
+  */
+  margin: 15px;
+  width: 40%; /*一個上の親(今はbody)のサイズに合わせる*/
+  box-sizing: border-box;
+}
