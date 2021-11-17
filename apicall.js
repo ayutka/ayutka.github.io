@@ -19,7 +19,9 @@ for (let i = 0; i < numberButton.length; i++) {
   numberButton[i].addEventListener("click", function (event) {
     const formula = document.getElementById("formula").value;
     const number = event.target.value;
-    const newFormula = `${formula}${number}`; //formulaの後ろに1を追加
-    document.getElementById("formula").value = newFormula;
+    if (number !== "=") {
+      const newFormula = `${formula}${number}`; //formulaの後ろに1を追加
+      document.getElementById("formula").value = newFormula;
+    }
   });
 }

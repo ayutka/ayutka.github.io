@@ -9,12 +9,83 @@
 
   <body>
     <input type="text" id="formula" />
-    <button id="submit">送信</button>
     <div id="ans"></div>
-    <div class="buttonUL">
-      <button class="button" value="1">1</button>
-      <button class="button" value="2">2</button>
-    </div>
+    <table class="buttonUL">
+      <tbody>
+        <tr>
+          <td>
+            <!--trが行tdはセル（列）-->
+            <button class="button" value="(">(</button>
+          </td>
+          <td>
+            <button class="button" value=")">)</button>
+          </td>
+          <td>
+            <button class="button" value="^">^</button>
+          </td>
+          <td>
+            <button class="button" value="/">÷</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!--trが行tdはセル（列）-->
+            <button class="button" value="7">7</button>
+          </td>
+          <td>
+            <button class="button" value="8">8</button>
+          </td>
+          <td>
+            <button class="button" value="9">9</button>
+          </td>
+          <td>
+            <button class="button" value="*">×</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!--trが行tdはセル（列）-->
+            <button class="button" value="4">4</button>
+          </td>
+          <td>
+            <button class="button" value="5">5</button>
+          </td>
+          <td>
+            <button class="button" value="6">6</button>
+          </td>
+          <td>
+            <button class="button" value="-">−</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!--trが行tdはセル（列）-->
+            <button class="button" value="1">1</button>
+          </td>
+          <td>
+            <button class="button" value="2">2</button>
+          </td>
+          <td>
+            <button class="button" value="3">3</button>
+          </td>
+          <td>
+            <button class="button" value="+">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!--trが行tdはセル（列）-->
+            <button class="button" value="0">0</button>
+          </td>
+          <td colspan="2"> 
+            <button class="button" value=" " >space</button>
+          </td>
+          <td>
+            <button id="submit" class="button" value="=">=</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <script type="text/javascript" src="apicall.js"></script>
   </body>
 </html>
