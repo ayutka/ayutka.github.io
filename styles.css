@@ -8,13 +8,11 @@ body {
 }
 
 #formula {
-  color: #eee; /*文字の色*/
-  font-family: Helvetica, Arial, sans-serif; /*フォント*/
-  font-weight: 500; /*文字の太さ*/
-  font-size: 18px;
+  /*#:id, .:class, :tag*/
+
   border-radius: 15px; /*角の丸み*/
   line-height: 22px; /*一行の高さ*/
-  background-color: transparent; /*背景を透明にしてbodyと合わせる*/
+
   border: 3px solid #cc6666;
   transition: all 0.3s; /*色が変わる速度*/
   padding: 13px; /*入力スペースの空白を開ける*/
@@ -26,4 +24,67 @@ body {
   margin: 15px;
   width: 40%; /*一個上の親(今はbody)のサイズに合わせる*/
   box-sizing: border-box;
+}
+
+.buttonUL {
+  /*5×４のボタン全体のこと*/
+  width: 60%;
+  table-layout: fixed;
+  /* text-align: -webkit-center;
+  text-align: -moz-center; */
+  margin: 0 auto; /*上下が０で左右がauto*/
+}
+.buttonUL > tbody > tr > td {
+  /*中央揃え*/
+  text-align: center;
+  vertical-align: middle;
+}
+tbody,
+tr,
+td {
+  width: 100%;
+  margin: 0;
+}
+.button {
+  /*ボタンの中身*/
+  width: 75px;
+  height: 75px;
+  border-radius: 50%; /*正円のボタン*/
+  background-color: #cc4949;
+  color: #eee;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+  box-shadow: -2px -2px 2px #ccc, 2px 2px 2px #babecc; /*ボタンの普段の影*/
+}
+.button:active {
+  /*ボタンを押したときの影*/
+  box-shadow: inset 2px 2px 2px #babecc, inset -2px -2px 2px #ccc;
+}
+.button:hover {
+  /*カーソルが上にくると色が変わる*/
+  background-color: #cc3333;
+}
+
+.calculator {
+  text-align: center;
+  margin: auto;
+}
+#ans,
+#formula {
+  color: #eee; /*文字の色*/
+  font-family: Helvetica, Arial, sans-serif; /*フォント*/
+  font-weight: 500; /*文字の太さ*/
+  font-size: 18px;
+  background-color: transparent; /*背景を透明にしてbodyと合わせる*/
+}
+#ans { /*答えのフォントサイズと位置*/
+  font-size: 35px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.formula_ans { /*ansの位置と入力枠の位置揃え*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
